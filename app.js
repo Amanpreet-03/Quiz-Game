@@ -132,6 +132,10 @@ function nextQuestion() {
   faceNumber=5;
   document.getElementById("game-screen").style.display = "block";
   document.getElementById("next-screen").style.display = "none";
+  let smileArray=document.getElementById("smiley-group").getElementsByTagName("img");
+  for (smile of smileArray){
+    smile.src="smiley.png"
+  }
   resetKeypad();
   loadQuestion();
 

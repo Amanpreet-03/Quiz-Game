@@ -5,8 +5,6 @@
   </head>
   <body>
     <div class="wrapper">
-
-
       <div class="title-screen">
         <audio id="player" src="game_music.mp3"></audio>
         <div>
@@ -19,90 +17,186 @@
       </div>
 
       <div id="instruction-screen">
-      <div id="instruction">
-        <div id="instruction-title">Instructions:</div>
-        <div id="instruction-part">
-          <div id="instruction-description">
-            Asking questions ensure that you truly understand the information
-            that is being shared with you. In this game, use the rhymes to
-            remember the 3 types of questions you can ask to further your
-            understanding.
+        <div id="instruction">
+          <div id="instruction-title">Instructions:</div>
+          <div id="instruction-part">
+            <div id="instruction-description">
+              Asking questions ensure that you truly understand the information
+              that is being shared with you. In this game, use the rhymes to
+              remember the 3 types of questions you can ask to further your
+              understanding.
+            </div>
+            <div id="smiley"><img src="smiley.png" /></div>
           </div>
-          <div id="smiley"><img src="smiley.png" /></div>
         </div>
+        <button class="button" onclick="showGameScreen()">Continue</button>
       </div>
-      <button class="button" onclick="showGameScreen()">Continue</button>
-      </div>
-
-
 
       <div id="game-screen">
-          <div id="smiley-group">
-            <img id="life1" class="smiley-box" src="smiley.png" />
-            <img id="life2" class="smiley-box" src="smiley.png" />
-            <img id="life3" class="smiley-box" src="smiley.png" />
-            <img id="life4" class="smiley-box" src="smiley.png" />
-            <img id="life5" class="smiley-box" src="smiley.png" />
-            </div>
-            <div id="question">            
-                When you want more than a "yes" or "no" ask this type of question to get info.
-            </div>
-            <div id="face"><img id="faceNumber" src="face5.png" /></div>
-
-            <!-- <input id="input-text" type="text" onkeyup="pressedKey(this)"/> -->
-
-            <!-- <div id="fill-ups"> -->
-            <div id="answer">
-                <!-- <div> -->
-                <!-- <div id="letter">a</div>
-                <div id="blank"/> -->
-                <!-- </div> -->
-                <span id="answerfield"></span>
-            </div>
-
-                                                                                                               
-                <div id="hint-box">
-                    <button id="hint-button" onclick="checkHint()">Hint</button>
-                    <input id="hint-text" type="text" />
-                </div>
-
-                <div class="keypad-line">
-                <div><button id="q" class="keypad-button" onclick="handleKeyClick(this)">q</button></div>
-                <div><button id="w" class="keypad-button" onclick="handleKeyClick(this)">w</button></div>
-                <div><button id="e" class="keypad-button" onclick="handleKeyClick(this)">e</button></div>
-                <div><button id="r" class="keypad-button" onclick="handleKeyClick(this)">r</button></div>
-                <div><button id="t" class="keypad-button" onclick="handleKeyClick(this)">t</button></div>
-                <div><button id="y" class="keypad-button" onclick="handleKeyClick(this)">y</button></div>
-                <div><button id="u" class="keypad-button" onclick="handleKeyClick(this)">u</button></div>
-                <div><button id="i" class="keypad-button" onclick="handleKeyClick(this)">i</button></div>
-                <div><button id="o" class="keypad-button" onclick="handleKeyClick(this)">o</button></div>
-                <div><button id="p" class="keypad-button" onclick="handleKeyClick(this)">p</button></div>
-                </div>
-
-                <div class="keypad-line">
-                <div><button id="a" class="keypad-button" onclick="handleKeyClick(this)">a</button></div>
-                <div><button id="s" class="keypad-button" onclick="handleKeyClick(this)">s</button></div>
-                <div><button id="d" class="keypad-button" onclick="handleKeyClick(this)">d</button></div>
-                <div><button id="f" class="keypad-button" onclick="handleKeyClick(this)">f</button></div>
-                <div><button id="g" class="keypad-button" onclick="handleKeyClick(this)">g</button></div>
-                <div><button id="h" class="keypad-button" onclick="handleKeyClick(this)">h</button></div>
-                <div><button id="j" class="keypad-button" onclick="handleKeyClick(this)">j</button></div>
-                <div><button id="k" class="keypad-button" onclick="handleKeyClick(this)">k</button></div>
-                <div><button id="l" class="keypad-button" onclick="handleKeyClick(this)">l</button></div>
-                    </div>
-
-                    <div class="keypad-line">
-                    <div><button id="z" class="keypad-button" onclick="handleKeyClick(this)">z</button></div>
-                <div><button id="x" class="keypad-button" onclick="handleKeyClick(this)">x</button></div>
-                <div><button id="c" class="keypad-button" onclick="handleKeyClick(this)">c</button></div>
-                <div><button id="v" class="keypad-button" onclick="handleKeyClick(this)">v</button></div>
-                <div><button id="b" class="keypad-button" onclick="handleKeyClick(this)">b</button></div>
-                <div><button id="n" class="keypad-button" onclick="handleKeyClick(this)">n</button></div>
-                <div><button id="m" class="keypad-button" onclick="handleKeyClick(this)">m</button></div>
-                </div>
-                
+        <div id="smiley-group">
+          <img id="life1" class="smiley-box" src="smiley.png" />
+          <img id="life2" class="smiley-box" src="smiley.png" />
+          <img id="life3" class="smiley-box" src="smiley.png" />
+          <img id="life4" class="smiley-box" src="smiley.png" />
+          <img id="life5" class="smiley-box" src="smiley.png" />
+        </div>
+        <div id="question">
+          When you want more than a "yes" or "no" ask this type of question to
+          get info.
+        </div>
+        <div class="face"><img id="faceNumber" src="face5.png" /></div>
+        <div id="answer">
+          <span id="answerfield"></span>
+        </div>
+        <div id="hint-box">
+          <button id="hint-button" onclick="checkHint()">Hint</button>
+          <input id="hint-text" type="text" />
+        </div>
+        <div class="keypad-line">
+          <div>
+            <button id="q" class="keypad-button" onclick="handleKeyClick(this)">
+              q
+            </button>
+          </div>
+          <div>
+            <button id="w" class="keypad-button" onclick="handleKeyClick(this)">
+              w
+            </button>
+          </div>
+          <div>
+            <button id="e" class="keypad-button" onclick="handleKeyClick(this)">
+              e
+            </button>
+          </div>
+          <div>
+            <button id="r" class="keypad-button" onclick="handleKeyClick(this)">
+              r
+            </button>
+          </div>
+          <div>
+            <button id="t" class="keypad-button" onclick="handleKeyClick(this)">
+              t
+            </button>
+          </div>
+          <div>
+            <button id="y" class="keypad-button" onclick="handleKeyClick(this)">
+              y
+            </button>
+          </div>
+          <div>
+            <button id="u" class="keypad-button" onclick="handleKeyClick(this)">
+              u
+            </button>
+          </div>
+          <div>
+            <button id="i" class="keypad-button" onclick="handleKeyClick(this)">
+              i
+            </button>
+          </div>
+          <div>
+            <button id="o" class="keypad-button" onclick="handleKeyClick(this)">
+              o
+            </button>
+          </div>
+          <div>
+            <button id="p" class="keypad-button" onclick="handleKeyClick(this)">
+              p
+            </button>
+          </div>
+        </div>
+        <div class="keypad-line">
+          <div>
+            <button id="a" class="keypad-button" onclick="handleKeyClick(this)">
+              a
+            </button>
+          </div>
+          <div>
+            <button id="s" class="keypad-button" onclick="handleKeyClick(this)">
+              s
+            </button>
+          </div>
+          <div>
+            <button id="d" class="keypad-button" onclick="handleKeyClick(this)">
+              d
+            </button>
+          </div>
+          <div>
+            <button id="f" class="keypad-button" onclick="handleKeyClick(this)">
+              f
+            </button>
+          </div>
+          <div>
+            <button id="g" class="keypad-button" onclick="handleKeyClick(this)">
+              g
+            </button>
+          </div>
+          <div>
+            <button id="h" class="keypad-button" onclick="handleKeyClick(this)">
+              h
+            </button>
+          </div>
+          <div>
+            <button id="j" class="keypad-button" onclick="handleKeyClick(this)">
+              j
+            </button>
+          </div>
+          <div>
+            <button id="k" class="keypad-button" onclick="handleKeyClick(this)">
+              k
+            </button>
+          </div>
+          <div>
+            <button id="l" class="keypad-button" onclick="handleKeyClick(this)">
+              l
+            </button>
+          </div>
+        </div>
+        <div class="keypad-line">
+          <div>
+            <button id="z" class="keypad-button" onclick="handleKeyClick(this)">
+              z
+            </button>
+          </div>
+          <div>
+            <button id="x" class="keypad-button" onclick="handleKeyClick(this)">
+              x
+            </button>
+          </div>
+          <div>
+            <button id="c" class="keypad-button" onclick="handleKeyClick(this)">
+              c
+            </button>
+          </div>
+          <div>
+            <button id="v" class="keypad-button" onclick="handleKeyClick(this)">
+              v
+            </button>
+          </div>
+          <div>
+            <button id="b" class="keypad-button" onclick="handleKeyClick(this)">
+              b
+            </button>
+          </div>
+          <div>
+            <button id="n" class="keypad-button" onclick="handleKeyClick(this)">
+              n
+            </button>
+          </div>
+          <div>
+            <button id="m" class="keypad-button" onclick="handleKeyClick(this)">
+              m
+            </button>
+          </div>
+        </div>
       </div>
 
+      <div id="next-screen">
+        <div id="result">Success</div>
+        <div class="face"><img id="face-expression" src="face9.png" /></div>
+        <div id="button-position">
+          <button class="button" onclick="nextQuestion()">Next</button>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="app.js"></script>

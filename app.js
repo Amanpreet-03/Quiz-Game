@@ -119,6 +119,14 @@ function handleKeyClick(e) {
   e.disabled = true;
 }
 
+function resetKeypad(){
+    let keyArray=document.getElementsByClassName("keypad-button");
+    for(a of keyArray){
+        a.innerText=a.id;
+        a.disabled=false;
+    }
+}
+
 function nextQuestion() {
   quizNumber++;
   faceNumber=5;
@@ -129,10 +137,3 @@ function nextQuestion() {
 
 }
 
-function resetKeypad(){
-    let keyArray=document.getElementsByClassName("keypad-button");
-    for(a of keyArray){
-        a.innerText=a.id;
-        a.disabled=false;
-    }
-}
